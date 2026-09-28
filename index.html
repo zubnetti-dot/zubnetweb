@@ -3,20 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ZubNet Suporte Remoto</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .logo {
+            width: 300px;
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .suporte {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .telefone {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .whatsapp {
+            display: inline-block;
+            padding: 14px 25px;
+
+            background-color: #25D366;
+            color: #fff;
+
+            text-decoration: none;
+            border-radius: 8px;
+
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        .whatsapp:hover {
+            opacity: 0.85;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>ZubNet</h1>
+    <div class="container">
 
-    <p>Suporte Remoto</p>
+        <img src="logo.jpg" alt="ZubNet" class="logo">
 
-    <p>Telefone: (11) 99522-3364</p>
+        <h1>ZubNet</h1>
 
-    <a href="https://wa.me/5511995223364" target="_blank">
-        Fale conosco pelo WhatsApp
-    </a>
+        <p class="suporte">Suporte Remoto</p>
+
+        <p class="telefone">
+            Telefone: (11) 99522-3364
+        </p>
+
+        <a
+            href="https://wa.me/5511995223364"
+            target="_blank"
+            class="whatsapp">
+            Fale conosco pelo WhatsApp
+        </a>
+
+    </div>
 
 </body>
 </html>
