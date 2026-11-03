@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZubNet · Suporte Remoto de T.I. em São Paulo</title>
+<meta name="description" content="Suporte técnico remoto, criação de sites e gestão de mídias sociais para empresas e home office. Atendimento pelo WhatsApp.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#05080f;--ink:#eaf2ff;--mut:#8fa3c0;--card:#0c1320;--line:#1c2c46;--acc:#3d8bff;--accink:#04101f;--sig:#6cc3ff;--term:#03050a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#eef4fc;--ink:#0b1626;--mut:#50627d;--card:#fff;--line:#d3e0f2;--acc:#1857c4;--accink:#fff;--sig:#2f8cff;--term:#07101d}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",sans-serif;line-height:1.08;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sig);outline-offset:3px}
+.w{max-width:1080px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+section.w{padding-top:76px;padding-bottom:76px}
+h2{font-size:clamp(28px,4.5vw,42px);font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.lead{color:var(--mut);max-width:56ch;margin:0 0 34px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:-.03em}
+.logo b{color:var(--acc)}
+nav{display:flex;gap:22px;align-items:center;font-size:15px}
+nav a{text-decoration:none;color:var(--mut)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--acc);color:var(--accink);font:700 16px "Bricolage Grotesque",sans-serif;padding:14px 24px;border-radius:10px;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+@media(max-width:760px){nav a:not(.btn){display:none}}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding-top:64px;padding-bottom:76px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(38px,6.4vw,66px);font-weight:800;letter-spacing:-.035em}
+.hero p{color:var(--mut);font-size:19px;max-width:48ch;margin:20px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
+.facts div{font-size:14px;color:var(--mut)}.facts b{display:block;font:700 26px "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.term{background:var(--term);border-radius:14px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.bar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:#0f1c33;color:#9fb9de;font-size:13px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--sig);animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.3}}
+.log{padding:20px;font:14px/1.9 ui-monospace,Menlo,Consolas,monospace;color:var(--termink);min-height:250px;margin:0}
+.log .ok{color:#6fe3a4}.log .in{color:var(--sig)}
+.cur{display:inline-block;width:8px;height:15px;background:var(--sig);vertical-align:-2px;animation:p 1s infinite}
+.svc{border-top:1px solid var(--line)}
+.svc details{border-bottom:1px solid var(--line)}
+.svc summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;padding:22px 0;font:700 clamp(20px,3vw,28px) "Bricolage Grotesque",sans-serif}
+.svc summary::-webkit-details-marker{display:none}
+.svc summary::after{content:"+";color:var(--acc);font-size:30px;line-height:1}
+.svc details[open] summary::after{content:"–"}
+.svc p{margin:0 0 24px;color:var(--mut);max-width:62ch}
+.diag{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.chip{font:500 15px "IBM Plex Sans",sans-serif;padding:10px 16px;border-radius:99px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.res h3{font-size:22px;margin-bottom:10px}.res ol{margin:0 0 20px;padding-left:22px;color:var(--mut)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;margin:0;padding:0;list-style:none}
+@media(max-width:860px){.steps{grid-template-columns:1fr 1fr}}@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;padding:22px 20px 0 0;border-top:3px solid var(--acc)}
+.steps li::before{content:counter(s);display:block;font:800 34px "Bricolage Grotesque",sans-serif;color:var(--acc);margin-bottom:6px}
+.steps b{display:block;font:700 19px "Bricolage Grotesque",sans-serif;margin-bottom:4px}
+.steps span{color:var(--mut);font-size:15px}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{cursor:pointer;font-weight:500;font-size:18px}
+.faq p{color:var(--mut);margin:10px 0 0;max-width:62ch}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+@media(max-width:860px){.contact{grid-template-columns:1fr}}
+form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;display:grid;gap:16px}
+label{font-size:14px;color:var(--mut);display:grid;gap:6px}
+input[type=text],textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:12px}
+fieldset{border:0;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:15px}
+fieldset label{display:flex;align-items:center;gap:8px;color:var(--ink)}
+.tel{font:800 clamp(28px,4vw,40px) "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--acc)}
+.soc{display:flex;gap:18px;margin-top:18px;font-size:15px}
+footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mut);font-size:14px}
+.fw{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:9;background:#1faa59;color:#fff;font:700 15px "Bricolage Grotesque",sans-serif;padding:13px 20px;border-radius:99px;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
+
+#pg{position:fixed;top:0;left:0;height:3px;width:0;background:var(--sig);z-index:20}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}.rv.on{opacity:1;transform:none}
+.hero{position:relative}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,70%) var(--my,30%),color-mix(in srgb,var(--acc) 20%,transparent),transparent 45%);pointer-events:none}
+.hero>*{position:relative}.term{transition:transform .15s}
+.sc{display:flex;gap:8px;flex-wrap:wrap;padding:12px 16px 0;background:var(--term)}
+.sc button,.tab,.st{font:500 14px "IBM Plex Sans",sans-serif;border:1.5px solid #27456f;background:transparent;color:#dbe9ff;border-radius:99px;padding:6px 13px;cursor:pointer;transition:.2s}
+.sc button:hover,.sc button.on{background:var(--sig);color:#10222e;border-color:var(--sig)}
+.th{background:transparent;border:1.5px solid var(--line);color:var(--ink);border-radius:99px;width:38px;height:38px;cursor:pointer;font-size:17px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tab,.st{color:var(--ink);border-color:var(--line);font-size:16px;padding:10px 18px}
+.tab:hover,.st:hover{border-color:var(--acc);transform:translateY(-2px)}
+.tab[aria-selected=true],.st[aria-selected=true]{background:var(--acc);color:var(--accink);border-color:var(--acc)}
+.pn{display:none;grid-template-columns:1fr 1fr;gap:28px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;align-items:start}.pn.on{display:grid}
+@media(max-width:760px){.pn{grid-template-columns:1fr}}
+.pn h3{font-size:24px;margin-bottom:8px}.pn p{color:var(--mut);margin:0 0 14px}
+.mini{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg);min-height:190px}
+.sw{display:flex;gap:8px;margin:10px 0}.sw button{width:30px;height:30px;border-radius:50%;border:2px solid var(--card);box-shadow:0 0 0 1.5px var(--line);cursor:pointer;transition:transform .2s}.sw button:hover{transform:scale(1.2)}
+.mk{border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.mk i{display:block;height:70px;background:var(--c,#3d8bff);transition:background .4s}.mk b{display:block;padding:10px 12px;font:700 17px "Bricolage Grotesque",sans-serif}.mk em{display:inline-block;margin:0 12px 12px;padding:6px 12px;border-radius:6px;background:var(--c,#3d8bff);color:#fff;font-style:normal;font-size:13px;transition:background .4s}
+.bb{max-width:85%;padding:9px 13px;border-radius:12px;margin:8px 0;font-size:15px;animation:pop .35s}
+.bb.c{background:var(--line)}.bb.a{background:var(--acc);color:var(--accink);margin-left:auto}
+@keyframes pop{from{opacity:0;transform:scale(.85)}}
+.lk{font-size:26px;background:none;border:0;cursor:pointer;transition:transform .2s}.lk:active{transform:scale(1.5)}.lk.on{color:#3d8bff}
+.meter{margin-top:26px;padding-top:22px;border-top:1px dashed var(--line)}
+.gauge{height:14px;border-radius:99px;background:var(--line);overflow:hidden;margin:12px 0}.gauge i{display:block;height:100%;width:0;background:#1faa59;transition:width .5s,background .5s}
+.ck{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:15px}.ck label{display:flex;gap:8px;align-items:center;color:var(--ink)}
+.sd{margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;min-height:84px}
+.sd b{font:700 20px "Bricolage Grotesque",sans-serif;display:block}.sd span{color:var(--mut)}
+.pv{margin-top:26px;background:#dcf8c6;color:#10222e;border-radius:14px 14px 14px 2px;padding:12px 16px;font-size:15px;max-width:420px;white-space:pre-wrap}
+.pvl{font-size:13px;color:var(--mut);margin-top:24px}
+#q{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px}
+.faq details[hidden]{display:none}
+.btn{transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.logo{display:inline-flex;align-items:center;gap:9px}.lg{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 14px rgba(61,139,255,.5)}
+.ic{width:1.2em;height:1.2em;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.22em;margin-right:.4em;flex:none}
+.pn h3 .ic{font-size:1.4em;color:var(--acc);margin-right:10px}
+.facts .ic{display:block;font-size:30px;color:var(--acc);margin:0 0 8px}
+.sd .ic{font-size:34px;color:var(--acc);margin:0 0 8px;display:block}
+.tel .ic,.soc .ic{margin-right:.3em}.soc a{display:inline-flex;align-items:center}
+.ck .ic{color:var(--acc)}.fw{display:inline-flex;align-items:center}
+.ico{width:44px;height:44px;border-radius:12px;background:color-mix(in srgb,var(--acc) 15%,transparent);color:var(--acc);display:grid;place-items:center;margin-bottom:12px}.ico .ic{margin:0;font-size:24px}
+@media(max-width:520px){.w{padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}section.w{padding-top:56px;padding-bottom:56px}}
+.ba{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);user-select:none;touch-action:pan-y}
+.ly{padding:26px 26px 30px;display:grid;gap:20px}.l1{background:var(--card)}
+.l2{position:absolute;inset:0;background:color-mix(in srgb,var(--card) 85%,var(--ink));clip-path:inset(0 0 0 var(--p,50%))}
+.ly em{font:500 15px "IBM Plex Sans",sans-serif;font-style:normal;color:var(--mut)}.l2 em{text-align:right;color:var(--ink)}
+.rw>div:first-child{display:flex;justify-content:space-between;margin-bottom:8px;font-size:15px;color:var(--mut)}.rw b{font:700 18px "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.tk{height:10px;border-radius:9px;background:var(--line);overflow:hidden}.tk i{display:block;height:100%;border-radius:9px;background:var(--mut)}.l2 .tk i{background:var(--ink)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.hd{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:var(--ink);pointer-events:none;transform:translateX(-1px)}
+.hd::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--ink);color:var(--bg);border-radius:50%;width:40px;height:40px;display:grid;place-items:center;box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.bt{display:flex;gap:10px;margin-top:16px;justify-content:center;flex-wrap:wrap}
+.lvs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+.lvs div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14px;color:var(--mut)}.lvs b{display:block;font:700 28px "Bricolage Grotesque",sans-serif;color:var(--ink)}
+@media(max-width:520px){.lvs{grid-template-columns:1fr}}
+header{background:#000;border-bottom:1px solid #1c2c46;--ink:#fff;--mut:#9fb3d1;--line:#26395a;--acc:#3d8bff;--accink:#04101f}
+.logo b{color:#ff8a1f}
+</style>
+</head>
+<body>
+<div id="pg"></div>
+<header><div class="w nav">
+<a class="logo" href="#topo" aria-label="ZubNet"><img class="lg" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAUEBAQEAwUEBAQGBQUGCA0ICAcHCBALDAkNExAUExIQEhIUFx0ZFBYcFhISGiMaHB4fISEhFBkkJyQgJh0gISD/2wBDAQUGBggHCA8ICA8gFRIVICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCACgAKADASIAAhEBAxEB/8QAHAAAAAcBAQAAAAAAAAAAAAAAAAECBAUGBwMI/8QAShAAAQMDAQQGBgUJBgQHAAAAAQIDBAAFEQYSITFBBxNRYXGBFCIyUpGhI0JigrEIFUNyssHR0vAXJDM0ovElU8LhNTZjdIOSk//EABsBAAEFAQEAAAAAAAAAAAAAAAUAAQMEBgIH/8QANREAAQMCBAIJAwMEAwAAAAAAAQACAwQRBRIhMUFREyJhcYGRobHRBjLwFCPhFjNSwUKi0v/aAAwDAQACEQMRAD8A8ZUKFCkkhQoUKSSFChR4pJIqFHij2aSSTQpeyTypQbUeVNddBpK5Yo8V26lXYaLqVdhprhddE7kuWKKupaUKSUkU91yWkJFClYoiKdcoqFChSSQoUKFJJChQoUkkKFHRgUk9kWN1dA0dkKPA8O+loRthKNkbuY41MoiRrewHrkpQUoZbjp/xFDkT7o7zv7BUbnW0VmKAvuToOaimIj8g9W02pauOykZPjTowWGDiVMbQocUN/SK+W4fGkSLi++kstAR45/RN7h581edNAnNPYndOXxt0aLqRS5aW1erFkP8AetwI+QB/Gn7NwtaQAbEwr9Z9zPyIqEQkgDNdUiuHRg7qaOqe3YDyCs8eVYXdz1k2Af8AkyVj9rNS8ax6UuWEsXKTbnDuAktB1H/2Rg/6apjRVUnFcUhQIJFVJKfTquIP5zReCtB0kaD4WVlndGF6aiGbDabuMMDJfhq61Kf1gN6fMCqdLsUmOSFtKT5Voul9R3K1SkyIctxlaeBSoitWjL0trpgM3iI1broobpjCMIcP/qIH4pwfGg0tZVUhvIMzeY38kcbQ0lW27Rb85cfDXsXk56Its70kDvpspsp5bq3fWPRjLs0g9ayerI20OIG0lxGfaSeBH9bqymdaHGCv1ScHs5UVpMRiqG3aUErsEkg6zdWnYhVvHdRYp06yUnhTcpI40TBus26MtNik4oqVRGulGioUKMcaSZGBXdDfWLyABk8BypCW8qASoHPOrDbYzdvhrukpoLKDsMNq4Lc7T3J3E9pwOZqJ78oV6mg6R2uw3REM2KOlxxCXLg4kKbQoZDAPBShzJ5DzPIVBuOuvuqdeWpxxZypSjkk0uQt2TJU64tTjritpSiclRo1oRGH0nrOYyEZ4eNJgtvumqJC82bo0fnmkJbOztKISntNTmntN3HU0lyNZo/pDzaStQUQkbIxk7z3jnVcW4p1YUs5/dW49CduKItxuCk4BShoHxJUfkkVSxKqNJTOmbuFcweibW1QhdtxVXHRLrjAIgtJ7ttv+aljoj1yCP7s0Pvt/zV6DKQDwGKTuBwRWH/qas5N8v5XoI+lKPmfX5WCN9E2uQdzTI++1/NT5jol18cYQxn9Zr+atuSlI3jGakoQQHAcVDJ9TVgF7DyXR+nKWMXF/X5WNQeh/pI2h1YZT/wDkf31dbN0PdLLKkuI6vZ7UttH99bDbVpSAOVW+1S1MOJKVlI54oBN9W1JdllaLdg+bobIXUf8AZaNOZd/6Wfx9C9Jcuxps93jMTIQO0EKS0laFdqVDeKzXVnRT+ZFF6+NejpXkpbQsLXjwTXpLWfSFB0fptU19xsy3EnqEKOBu4rP2R8zurKdAX+D0sWe/Wyc7t3VCvS47znEg+qR4ZA8MiizJQYBUUxdbjsAPTdSUWI1GQzVLGtivqANTwJFyduJXna4WzQsPdIhS1g/WBCT+1TRPRtZtV256Xoa5OPTWc7VtlJCXF7s4bUNyjgHAOCcbs1YekDTjtvlvtuNltSFEKCh7JBwaqeirhJs0ydKjOlCw7HQ0objt9ckgjySqtNTSyOp+mhkOYcDqFbxGCF8ohexuVw0IHZpssylRnYrymnUFC0nCkkYINNjWw9PVsjRekWRNitJaE1PXOISMAOZIV8SM+dY/21pqKpFVAyYC2YXXmtdTfp5jGk0pIyeOKTXdtvKhkHfwq4dFSaLmylLTbZE+YzFYSlS1rCE7xxP7qlr8UGQmPG/ysZPVNd4HFXio5PnVn6PbIpTU+6FOfRmNhJx7LjmU/JIWaj79Ej2wLlvgFKDhKPfVyFBXVQdU9ENwtnDQiOhMjtL79yqTobt0cLWAZbgyhJ+ontPfUMpSlqKlEkneSeddJD7kl9bzqtpazkmuQowxthrusjNIHu6ugRjeoDOK2TTHSBa9L2Y22OmJJyvbLqnVpJ9UADASeGPnWODGd4pw0lBxlIPlUFVRx1bMkuoVzD8RkoHF8QFzzW5npkh53w4ZH/uHP5KSemSCT/kIvk+5/JWSw2Y6lDaYbV4pFXiyRLQlW2/bIS0gZJcZSQB2nNDP6eof8fVGh9T1x5evyrH/AGywAf8Aw5g//M5/LU5Yek2Ze5DbFo04mU44sNoSl1Y2ldgyP9qpD62tbSmrBpuwQott61KXJMaE2l+WscENnGQn/c9lbvpbSVv0nbAzHS2qetvq3XG96Wk822z2e8rio93HNYxDhtAy2S7zwv7o/h1dXVfXkIDfHX129+CtUJ5bTTKH1NiQEjrgysqbC+YSTvIHDPPfjdT6ZqSHYbS9c57pSyyOAPrOKPsoT3n5bzyqtOvtxUOPvPJZZaSVuOK4ISOJP9d1YTr3V9y1dfBZrRtoZbSdlJ/QN/WcX9tW7wGAKx2H4McSqLkWZx+FdrjFBHmkN/c9nioPpG6RLnrK+SNt0hnawsIPqgD2W09w+Z31Zfyfr+/bOlq2tJX9HKbdYWAeILZI+aRWcTrY3CQGWgQhPNXE95q1dDzaj0t6faZTtOKkk4HYEKJ+Qr06spIY6B8MYs3KfZZIVD55v3dBa1uAHABb706W9l2C3qKOhOzI+jfA5OAbleY+YrDuj20C9a7t8RxOzbratVzuC+QSgDcfkkd6jWodIOqPzjfH9Ew2VznZTCIbLbQ2iZG2VBSQOxYx4Z5UhGm2tA6cOl/SG1XmcEyL1KScpZSkFQZB91AySeZ8qylBI+lw8Rv+9+g8Rv4e9ua1Mcb5XRUxdsL35NBvr3fCx7piuguWpGnFH6Qs9YodhWtSsfAisoVxqw6qu3561BMuKRht1Z6tPutgYSPgBVcJr0Ggg6CnZHyCweMVDaiqe9u19O7ggONSMBla0lxKSdhQ2t24A8PnUcONTVmaS5MbSocVCrUrsrSVTomZ5g1em+jfTinOiszVI9ebNWrcMZCEpSPmVV596RbkiXquRCjL2o0JRaBHBSx7R+O7yr15CdY0v+S6xeWsB1th4s55uuOFKfgd/lXh6cPp1EnJJySedZDAmOlqp6l/OwWnxepeab9ONg4g+CYmgKBoq2ixaVXZtWK40pOc7q7BskpaK8EKyTgDjVgs8C56qmNW+Kh70NbgRstD15KuSR/W7iajNO6emX6Y0y006tpSwhKWxlbyvcSO38K9J6Zstv0jDDaS0u5KRsOOt70R082mz+0rnwG7iBxbFW0cZazV5WmwfCH1bw946vv/AB7qY0lpiDpG2JaaS2u4qRsOuo3pYTzbbP7Sufhxn1yEgblAYG8k4AHb3CoA3NCiEpJJzgAVmfSHr9EeI7aYDoUkkoeUg/4yv+WD7oPtHmd3j5nFRVGJVN3bnc8l6HOIqGHO82R6/wBdLmyWrJY8v9YsBlKf06+HWH7I+qD3k04s9ghWHTzjS3BIuMn6SVI4lxfYD7o5du81m1gcMWS5cpZDs57io/o0+6P67qtf5+KhjayMV6ZT0TKOIRRjvXn1RXGtkLnbDYf771BX6MC4oDtpXRw9eI2qlS9PR3H7stC4sNLSdpYU4NlSk9hCNrfyznlU/aNI6h17cnLbYIu0lB/vc13KWIqftK97sSMqPZV/ZvOkOie2OWPSC0XfUDoLcm6KSCAfdSBndn6o+8Sd1VMRrWMYaeMZ3nhyHNx4D1PBPh8Dnz5rXtz2VsslntfRbCcucxxm5a4mNbAcB20QEEeyjtJ5q+ty3cck6VL89bYztiS8VXWeAq4OKO9lB9YNE+8rcVdgwO2u9x1srTzipcx8TdTyPWQ24dsQs/pHO1z3U8uJ5CqBrxan50aW4pSnJMNh5alHJUpTYySeZNB8PoZTUNqKk35ctOQ5Dhz379BU1DY4pIoXXcfvdz7B2BZ3IJDqk7QO/BI4Gm5rs+MLxXE1vAvO5PuKA41J2yQWpLZJOARzqMBrul5e0kk52RsjcOFM9uYWXdPIY3hw4L05rvVRT+SroK3tOAmZKk9Zv3kMqUMfFwV5oknrHFHIq8Tryq7dElitZVlVpuMvAzwS8hpQ+aF1SZDK0OqaOFKSeKVZHxofRwNgBaOZ90Vq5HSN7CSfMpkaLBpymI8t1DSW1KW4BsJAyVZ4U/8ARGregl0pdkDceaGz2faV8h30RzAIS2FzteCjepKEhbm7O8Dmf+1Tmn9OyrzKbCWXFNLWEIQ2MqeV7qR+J5U4sGnZV7ltvOsuuNOL2G20DK5C8+yn95+HdtEWJF0nELTfVLuikdW661vRHRzabx/qVz4DdkkTX4gKcZGauK0mD4I+sdneOr79vd7qRsdrhaTghpCm1XNaOrcdbOUx082mz+0rnwG7JKH7gMnCsJFVx+6LUrjuqEvGoRbYxUlzEkp2kk7w0OSj39g86yLKSWplzO1JXoxkgoYrk6BSuqdXi1w3YbDxTIKcOuJOC0D9RP2z8h38MhMpcqX6W/jI3No5IFcnXZt6uKWmGXX3CT1bSAVqUTxOBvJPOrLD0lHhAPatvTNpaG8xWcPyl92wk4R94jwrZUtPDQssdz5nwXmeJV8+KSnIOoPJMor0iTIajRGVvvuHZQ22kqUs9gA3mtWteirRp6E1e+lK7/mmKobbVqYXmVI7jjekeHmpNUv+0aFpyOuFoKzN2oqGyu5ScPzHB4n1UeABqhTbnKuM1ybcZT8uS4cqcdWVKV4k00rKiq0B6Nv/AGP+m+p7lQBhgFicx9Pk+i2TVHTJc75bhpTRcBGmdMNAgR2CELcHNTqxwzzA8yqs7VqUWsBuzq66cd3phTub7mwef2j5VVnZTrqOq9lvO5Cdw/707iR+ojuTXBvQPVB947h/XdUkGHwQNysbp7nmTuT3pHEJAMsWnb8fO6JD7xkqU4tTjhUSpSjkk53knnV21o4luU3EKApbESMztZ9kpZTkfGqnp2D+cdRQYR9l15KVHsTn1j8M1JanuRuF2mT2xgOuqWN3AEnA+FdSjNM0DgrdGclNI93FViQlaVeukjIyMjiO2uBrot1bhytRJ4bzyrlV4bIC83N0K7NtLWhSwPVScE9meFca6IO8DNIpm7qxadZVLdetwUCp5G0hPatO/Hw2qdosMyRKSwwyVqUcYxTK1LfYlRX2ng2thQcbUE7wc5/rNelLDo6Pq6BDkWptMdu5BTk1XD0dCAC4jPIEnj7tZ/EK39I4O4H3W5wykhnp/wB82y+o3ssFXCj2qC6qOo7HsOzE8XTzQ12J7Vc/DiNPaWlaglMyn4znoq19XGjtA7UhWcbKe7PE+Q7tUXoVzVeqEGPDcNpaX1UGI2khUgA4zjkk43ns3dprZLdoyNpCJtrDbt3cb2FONjCIqMY6pvs3bioeA3cQ9b9QR0sWhu8+n5x5K+7DIulAk+3g3n2nk0eZ71ncLTrel4ChtNquq2+rcca9iMjH+E3+ClDwG7JNSuiSTgcBV51PdrdAC0PvhTvJpv1lHy5edZfOub9wfIAMWP7qD66vFXLy+NCaLpqg9NJx/NFsOpBCGN3XDqJsp9ce2RFzZYG5tOMI71EkAeGcmouV0Y65ur5W5BUgE7XrKSST2nCqt1unsRWEsNNoQ2PqgbvHxqZYu6CRjA8qKGumpz+y0d5VGfB4q5o6aTwG3uqRG6JekUMejxnhEaIwUteptDv2d586U3+T9rl9Qy7G9bmor/hWqxLsjA9nJ7KlTqOLBbDkyQzGb955QQPnVF+PYiDZjRfuQ6f6VgY3U6d5+VkKPyatcL9mZbvNTn8tOmvyW9fPZ2JtqGBklTjgAHb7FXW5dMdht2UW8ruj44BobDY8VHj5A1lesOmLU2oG1wVzQxFVu9Di+o3988V+ZxROiqsaqHjO0Nb27+XysrV4fQ04+4evyoXUfR2nSTnVTNWWK4Tc7IiW55x9wnsyEbI+NVy9ER3E2tBB9H/xsbx1nMfd4eOamcK03b0XW4L27/MRmIyeMRB/TKHJR+onl7R4JqvW23yLlcGYcZsuPPLCEJHEk1rWOIbd5us+6MF+SIWv5qd02yINquF6cOyrYMSOftrHrEeCM+ahUFNK2jh5sjbTtAHduPA1YNSSWI7ce1Qjtw4QLQdTwdc3FxfmcAdwTVPdWVq3mo4QXkyHirtW5sLBA3ce/FcjSaM0VXUCKMca7MoUpfqgmuSSkH1hmnrMxTYHV7DZHBQGSPjXLr20UkQbm6xVw0zbnJEtoSkOFpWUqKBtEbsJOO44r170Jac/4Vc2ZUl70eSx1Tzqk7KMEb054DHb2GvG9o1QLe4mQuMZjo9kPOqDY+6MbXmausXpf1A+hmO/cFtxmjhMdgBttAxySBj/AGrJ4pRVNSQGjqjfh7a+y3tPUUrqX9Mx+VzuJ1t+d69ny7ho7QEF0xCmbcFDZK0qSCByTtcEjwrE9UdIFyuz6+rYitNEn6NqTskjvOc1lsXWn5yaVb7k/vVubkr3jwX3d/Koi/2e7xDtPWdlxtSQpLgSrCk8iCDgjvrPswlhmBqAARty9Tv6o5SQwUzOnb+687k3uPAKZuExRcUo6dacyc5E1X8agZVzcbP/AJZbT4zFn99UyW4tpRC7ayg/e/jUS9Jzu9EZT4A/xrXQUDABr7/KCVmNPBO48T/sK5P6kkt56uxRUEe8+4f+uo53WN4bV9GzBYHYEbX4qNVQyFA7mmx92kF15RwncTySkUSbRxDdoWelxmoP2vcPFWZ3WOp5CCgXV1pB5MBLQ/0gVEPXFTiy5KkLkOniVKKj8TTH0d5W9xWx+ucfKuiWo6DlRLpHbuH8anZBG37QB3Ie+vqJNXuJ7zddevmTFFthJSngcdneak4qoNjSmUoJlz+LaSPUbPbjnUUqYoDYawkDkBgCuTbbj7oAytaj4kmuy0WtwUTZHOdfdy7uOybhNclSXVPPuq2lrUclRq4JSjSdnO0MXqa3jHOIyoc+xax8EntVuaRWo2m0iTKQ2/dMZaYOFJjn3l9quxPLieyq9NnyJEhch15Tji1FSlrOSoniTmqjgZTb/j7/AMIqwCkYXu+8+n8prKeUpxQJ3k76a550ZOTvpJq6BZApJC92YoqFChXSiQpSApSglIyeyk0KSS6ZIPHhTlEgqPrEAk5zwpnmjBrkhSteQbhWOBMKFp6tRUkHaIPEVvOgOkaDboKLVdIse421XtRJQ2kAnmg8UHw+Feaw6pkp2VhWRnceFP4k54upAcSjKgMqOAM8/ChFbh7akamy1OHYu2EZJG3B/NDwK9h3DSHRLrSMHLHGTEnLGTDclFtRP2CchXhx7qy/UXRhY7WXB+ZX+sTuKXJSxjywKyyLqWRFGyHiog47RVwt3SheksJjP3ESI4B+ilJ61IAHAZyR2bqzrcPr6Z14pCRyJK0Uc1BLpJ1r/wCWpHjx8R4qtTbFbmVlLdvS3jtUpX4moKY0GcpRhI7EjH4VfpOrLFcv83ZUIUfrR3lN/I7Qqtz3tNOZKG5qe7rkH/po5TzS7SNKo1VHTlpMJaFSV7nDREKVgY41OOOWVJPVQXVntcf/AIAUhc8x8hiOzGweLacnP6xyfnRYSEjQLKupGA3e8eCax7Q+pAdkFMZk8Fu7s+A4mnqZse2pKbckhwjBkrHr/d938e+ox6Yp3acUsqWT9Ykk9+abuPpU0lCUAKByVb8nupZHO+5ITRQj9oa8+PgpOMIsi5dTcpvozWDtOpT1mDjI3A78nA86h3VDbIScjNIJOaImpWssVSlnMjbEa80RoqFCpFUQoUKFJJChQoUkkKMcaKhSSSs0pKiK50KaycGy7dae2lh9QBGeNN80M91NlCkEjk6ElQGAaL0lRBSTuptmhmllCczP5pyl9STtJODy7q5qdUvjnOc1yzQzT2XJkJ3Sjk0WaLNFTrglHmioUKSZChQoUkkKFChSSX//2Q==" alt=""><span>Zub<b>Net</b></span></a>
+<nav><a href="#servicos">Serviços</a><a href="#diagnostico">Diagnóstico</a><a href="#como">Como funciona</a><a href="#duvidas">Dúvidas</a><a class="btn" href="#contato" style="padding:9px 18px;color:var(--accink)">Abrir chamado</a><button class="th" id="th" aria-label="Alternar tema">◐</button></nav>
+</div></header>
+
+<main id="topo">
+<div class="w hero">
+<div>
+<h1>Seu computador resolvido, sem você sair da cadeira.</h1>
+<p>Suporte técnico remoto de T.I. para empresas e home office em São Paulo. Chame pelo WhatsApp e um analista acessa a máquina, com a sua autorização, e resolve na hora.</p>
+<div class="cta"><a class="btn" href="https://wa.me/5511995223364?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20t%C3%A9cnico." target="_blank" rel="noopener">Falar com um analista</a><a class="btn ghost" href="#diagnostico">Testar o diagnóstico rápido</a></div>
+<div class="facts"><div><b><span data-n="21">0</span> anos</b>de ZubNet, desde 2005</div><div><b><span data-n="100">0</span>% remoto</b>sem visita técnica</div><div><b>WhatsApp</b>atendimento direto</div></div>
+</div>
+<div class="term" aria-label="Exemplo de atendimento remoto">
+<div class="bar"><span class="dot"></span><span data-ic="monitor"></span>Analista conectado</div>
+<div class="sc" id="sc"><button data-k="lento" class="on">Lentidão</button><button data-k="virus">Vírus</button><button data-k="rede">Rede</button></div>
+<pre class="log" id="log" aria-live="off"></pre>
+</div>
+</div>
+
+<section id="servicos" class="w">
+<h2>O que a ZubNet faz pela sua empresa</h2>
+<p class="lead">Escolha um serviço e experimente.</p>
+<div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="true" data-p="0" data-ic="monitor">Suporte remoto</button><button class="tab" role="tab" aria-selected="false" data-p="1" data-ic="globe">Criação de sites</button><button class="tab" role="tab" aria-selected="false" data-p="2" data-ic="heart">Mídias sociais</button></div>
+<div class="pn on"><div><h3 data-ic="monitor">Suporte técnico remoto</h3><p>Lentidão, vírus, impressora, e-mail, rede, Windows e programas que não abrem. O analista acessa sua máquina com a sua autorização, resolve e encerra a sessão.</p><button class="btn" id="chat">Ver exemplo de conversa</button></div><div class="mini" id="cb"><span style="color:var(--mut)">Toque no botão para ver um atendimento.</span></div></div>
+<div class="pn"><div><h3 data-ic="globe">Criação de sites</h3><p>Site profissional rápido, que funciona bem no celular e leva o cliente direto ao seu WhatsApp. Monte uma prévia:</p><label>Nome da sua empresa<input type="text" id="en" placeholder="Padaria Estrela" style="font:inherit;padding:10px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink)"></label><div class="sw" id="sw"><button style="background:#3d8bff" data-c="#3d8bff" aria-label="Azul"></button><button style="background:#8a5bd6" data-c="#8a5bd6" aria-label="Roxo"></button><button style="background:#19b5c9" data-c="#19b5c9" aria-label="Ciano"></button><button style="background:#2f9e6a" data-c="#2f9e6a" aria-label="Verde"></button></div></div><div class="mini"><div class="mk" id="mk"><i></i><b id="mt">Sua empresa aqui</b><em>Chamar no WhatsApp</em></div></div></div>
+<div class="pn"><div><h3 data-ic="heart">Gestão de mídias sociais</h3><p>Perfis organizados, postagens regulares e identidade visual consistente para a sua empresa aparecer e ser lembrada. Escolha a rede e curta a prévia:</p><div class="tabs"><button class="tab" id="n1" aria-selected="true">Instagram</button><button class="tab" id="n2" aria-selected="false">Facebook</button></div></div><div class="mini"><b id="nn">Instagram · sua empresa</b><div class="mk" style="margin:10px 0"><i style="height:80px"></i></div><button class="lk" id="lk" aria-label="Curtir">♡</button> <span id="lc">12</span> curtidas</div></div>
+</section>
+
+<section id="diagnostico" class="w" style="padding-top:20px">
+<h2>Diagnóstico rápido</h2>
+<p class="lead">Qual é o problema? Veja o que tentar primeiro e, se não resolver, chame a gente com a mensagem já pronta.</p>
+<div class="diag">
+<div class="chips" id="chips"></div>
+<div class="res" id="res"></div>
+<div class="meter"><h3 style="font-size:22px">Medidor de saúde do computador</h3><p class="lead" style="margin:6px 0 14px">Marque o que está acontecendo agora.</p><div class="ck" id="ck"><label><input type="checkbox">Demora para ligar</label><label><input type="checkbox">Programas travam</label><label><input type="checkbox">Janelas estranhas aparecem</label><label><input type="checkbox">Internet cai</label><label><input type="checkbox">Ventilador muito barulhento</label></div><div class="gauge"><i id="gi"></i></div><div id="gt" style="color:var(--mut)">Computador saudável.</div><a class="btn" id="gb" target="_blank" rel="noopener" style="margin-top:14px;display:none">Pedir ajuda no WhatsApp</a></div>
+</div>
+</section>
+
+<section id="como" class="w">
+<h2>Como funciona o atendimento</h2>
+<p class="lead">Sem fila, sem formulário longo e sem deslocamento.</p>
+<div class="tabs" role="tablist"><button class="st" aria-selected="true">1. Você chama</button><button class="st" aria-selected="false">2. Análise rápida</button><button class="st" aria-selected="false">3. Acesso autorizado</button><button class="st" aria-selected="false">4. Resolvido</button></div>
+<div class="gauge"><i id="sp" style="width:25%;background:var(--acc)"></i></div><div class="sd" id="sdt"></div>
+</section>
+
+<section class="w" id="antes"><h2>Antes e depois do suporte</h2><p class="lead">Arraste a divisória, toque nos botões ou deixe a animação rodar. É uma ilustração do que um atendimento resolve.</p>
+<div class="ba" id="ba"><div class="ly l1"></div><div class="ly l2"></div><span class="hd"></span><input type="range" min="0" max="100" value="50" id="rg" aria-label="Comparar antes e depois"></div>
+<div class="bt"><button class="chip" id="bA">Antes</button><button class="chip" id="bC">Comparar</button><button class="chip" id="bD">Depois</button></div>
+<div class="lvs" id="lv"></div></section>
+<section id="duvidas" class="w faq">
+<h2>Perguntas frequentes</h2><input id="q" type="search" placeholder="Pesquise sua dúvida..." aria-label="Pesquisar dúvidas"><p id="nf" hidden style="color:var(--mut)">Nada encontrado. Pergunte pelo WhatsApp.</p>
+<details><summary>Preciso instalar algo no meu computador?</summary><p>Se o caso exigir acesso remoto, o analista orienta você pelo WhatsApp sobre o que usar, passo a passo.</p></details>
+<details><summary>Meus dados ficam seguros durante o atendimento?</summary><p>O acesso só acontece com a sua autorização e você acompanha tudo na tela. Ao final, a sessão é encerrada.</p></details>
+<details><summary>Atendem empresas e pessoas físicas?</summary><p>Sim. Atendemos empresas, profissionais autônomos e quem trabalha em home office.</p></details>
+<details><summary>Como peço um orçamento de site?</summary><p>Use o formulário abaixo, marque "Site profissional" e conte sobre o seu negócio. O orçamento é sem compromisso.</p></details>
+</section>
+
+<section id="contato" class="w">
+<div class="contact">
+<div>
+<h2>Vamos resolver o seu caso</h2>
+<p class="lead">Marque o que você precisa e a conversa abre no WhatsApp com a mensagem pronta.</p>
+<a class="tel" href="https://wa.me/5511995223364" target="_blank" rel="noopener">(11) 99522-3364</a>
+<div class="soc"><a href="https://www.facebook.com/zubnet.ti" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/zub.net.br/" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/zubnetbr" target="_blank" rel="noopener">X (Twitter)</a></div>
+<div class="pvl">Prévia da sua mensagem:</div><div class="pv" id="pv"></div>
+</div>
+<form id="f">
+<label>Seu nome<input type="text" id="nome" autocomplete="name"></label>
+<fieldset><legend style="font-size:14px;color:var(--mut);margin-bottom:8px">Do que você precisa?</legend>
+<label><input type="checkbox" name="s" value="Suporte técnico" checked>Suporte técnico</label>
+<label><input type="checkbox" name="s" value="Site profissional">Site profissional</label>
+<label><input type="checkbox" name="s" value="Mídias sociais">Mídias sociais</label></fieldset>
+<label>Conte o que está acontecendo<textarea id="msg" rows="4"></textarea></label>
+<button class="btn" type="submit">Enviar pelo WhatsApp</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer><div class="w"><a class="logo" href="#topo" style="display:inline-flex;margin-right:14px;font-size:20px"><img class="lg" style="width:28px;height:28px" src="data:image/jpeg;base64,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" alt=""><span>Zub<b>Net</b></span></a>© ZubNet 2005–2026. Todos os direitos reservados. Suporte Remoto de T.I. · São Paulo</div></footer>
+<a class="fw" href="https://wa.me/5511995223364" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+var WA="https://wa.me/5511995223364?text=";
+var D={
+"Computador lento":["Feche programas e abas que você não usa.","Reinicie o computador por completo.","Veja se o disco tem menos de 10% de espaço livre."],
+"Sem internet":["Reinicie o roteador por 30 segundos.","Teste outro aparelho na mesma rede.","Confira se o cabo está bem encaixado."],
+"Impressora não imprime":["Veja se há papel e se está ligada.","Cancele a fila de impressão e tente de novo.","Reinicie a impressora e o computador."],
+"Suspeita de vírus":["Desconecte da internet agora.","Não digite senhas nesse computador.","Chame um analista antes de mexer em mais nada."],
+"Outro problema":["Anote a mensagem de erro, se houver.","Tire uma foto ou print da tela.","Envie para o analista com o que você já tentou."]};
+var chips=document.getElementById("chips"),res=document.getElementById("res");
+function show(k){
+ [].forEach.call(chips.children,function(c){c.setAttribute("aria-pressed",c.textContent===k)});
+ var msg=WA+encodeURIComponent("Olá, estou com este problema: "+k+". Já tentei as dicas do site e preciso de ajuda.");
+ res.innerHTML="<h3>"+k+": tente isto primeiro</h3><ol>"+D[k].map(function(t){return "<li>"+t+"</li>"}).join("")+"</ol><a class='btn' target='_blank' rel='noopener' href='"+msg+"'>Não resolveu? Chamar no WhatsApp</a>";
+}
+Object.keys(D).forEach(function(k){var b=document.createElement("button");b.className="chip";b.type="button";b.textContent=k;b.setAttribute("aria-pressed","false");b.onclick=function(){show(k)};chips.appendChild(b)});
+show("Computador lento");
+document.getElementById("f").onsubmit=function(e){
+ e.preventDefault();
+ var s=[].map.call(document.querySelectorAll("input[name=s]:checked"),function(i){return i.value}).join(", ")||"Suporte técnico";
+ var t="Olá, sou "+(document.getElementById("nome").value||"cliente do site")+". Preciso de: "+s+". "+document.getElementById("msg").value;
+ window.open(WA+encodeURIComponent(t),"_blank","noopener");
+};
+var $=function(x){return document.querySelector(x)},$$=function(x){return [].slice.call(document.querySelectorAll(x))};
+var SC={lento:["Iniciando sessão remota...","ok|Autorização do cliente: recebida","Verificando o computador...","in|Encontrado: 14 programas na inicialização","Limpando arquivos temporários...","ok|Desempenho normal. Sessão encerrada."],virus:["Iniciando sessão remota...","ok|Autorização do cliente: recebida","Executando varredura completa...","in|Ameaça encontrada: 3 arquivos suspeitos","Removendo e protegendo o sistema...","ok|Computador limpo. Sessão encerrada."],rede:["Iniciando sessão remota...","ok|Autorização do cliente: recebida","Testando conexão com a internet...","in|Falha: DNS com configuração errada","Corrigindo as configurações...","ok|Internet normal. Sessão encerrada."]};
+var log=$("#log"),tm=[];
+function run(k){tm.forEach(clearTimeout);tm=[];log.innerHTML="";$$("#sc button").forEach(function(b){b.classList.toggle("on",b.dataset.k==k)});
+ SC[k].forEach(function(l,i){var c="",t=l;if(l.indexOf("|")>0){c=l.split("|")[0];t=l.split("|")[1]}
+  tm.push(setTimeout(function(){var d=document.createElement("div");d.className=c;d.textContent="> "+t;log.appendChild(d);if(i==SC[k].length-1){var u=document.createElement("span");u.className="cur";log.appendChild(u)}},matchMedia("(prefers-reduced-motion:reduce)").matches?0:i*950))})}
+$$("#sc button").forEach(function(b){b.onclick=function(){run(b.dataset.k)}});run("lento");
+var th=$("#th");th.onclick=function(){var r=document.documentElement;r.dataset.theme=r.dataset.theme=="light"?"dark":"light"};
+addEventListener("scroll",function(){var h=document.documentElement;$("#pg").style.width=(scrollY/(h.scrollHeight-innerHeight)*100)+"%"});
+var hero=$(".hero"),term=$(".term");
+hero.addEventListener("mousemove",function(e){var r=hero.getBoundingClientRect();hero.style.setProperty("--mx",(e.clientX-r.left)+"px");hero.style.setProperty("--my",(e.clientY-r.top)+"px");var t=term.getBoundingClientRect();term.style.transform="perspective(800px) rotateY("+((e.clientX-t.left-t.width/2)/t.width*8)+"deg) rotateX("+(-(e.clientY-t.top-t.height/2)/t.height*8)+"deg)"});
+hero.addEventListener("mouseleave",function(){term.style.transform=""});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add("on");$$("[data-n]",e.target).length;io.unobserve(e.target)})},{threshold:.12});
+$$("section,.facts").forEach(function(x){if(!x.classList.contains("hero")){x.classList.add("rv");io.observe(x)}});
+$$("[data-n]").forEach(function(el){var n=+el.dataset.n,t0=null;(function f(t){t0=t0||t;var p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)})(0)});
+function tabs(sel,fn){$$(sel).forEach(function(b,i){b.onclick=function(){$$(sel).forEach(function(x){x.setAttribute("aria-selected",x==b)});fn(i)}})}
+tabs(".tabs:first-of-type .tab[data-p]",function(i){$$(".pn").forEach(function(p,j){p.classList.toggle("on",i==j)})});
+$("#chat").onclick=function(){var c=$("#cb");c.innerHTML="";[["c","Meu computador está muito lento!"],["a","Pode me autorizar o acesso? Vou olhar agora."],["c","Autorizado!"],["a","Pronto, limpei a inicialização. Pode testar."],["c","Voltou ao normal, obrigado!"]].forEach(function(m,i){setTimeout(function(){var d=document.createElement("div");d.className="bb "+m[0];d.textContent=m[1];c.appendChild(d)},i*900)})};
+$$("#sw button").forEach(function(b){b.onclick=function(){$("#mk").style.setProperty("--c",b.dataset.c)}});
+$("#en").oninput=function(){$("#mt").textContent=this.value||"Sua empresa aqui"};
+$("#n1").onclick=function(){this.setAttribute("aria-selected",true);$("#n2").setAttribute("aria-selected",false);$("#nn").textContent="Instagram · sua empresa"};
+$("#n2").onclick=function(){this.setAttribute("aria-selected",true);$("#n1").setAttribute("aria-selected",false);$("#nn").textContent="Facebook · sua empresa"};
+var lk=$("#lk");lk.onclick=function(){var on=lk.classList.toggle("on");lk.textContent=on?"♥":"♡";$("#lc").textContent=on?13:12};
+$$("#ck input").forEach(function(c){c.onchange=function(){var s=$$("#ck input:checked").map(function(i){return i.parentNode.textContent}),n=s.length,g=$("#gi");g.style.width=(n*20)+"%";g.style.background=n<2?"#1faa59":n<4?"#ffc83d":"#ff8a1f";$("#gt").textContent=n==0?"Computador saudável.":n<2?"Atenção: vale ficar de olho.":n<4?"Precisa de uma revisão.":"Precisa de ajuda agora.";var b=$("#gb");b.style.display=n?"inline-block":"none";b.href=WA+encodeURIComponent("Olá, meu computador apresenta: "+s.join(", ")+".")}});
+var ST=[["Você chama","Envie uma mensagem no WhatsApp contando o problema."],["Análise rápida","O analista entende o caso e diz o que precisa."],["Acesso autorizado","Você libera a conexão e acompanha tudo na tela."],["Resolvido","A sessão é encerrada e você volta ao trabalho."]],cur=0,auto;
+function step(i){cur=i;$$(".st").forEach(function(x,j){x.setAttribute("aria-selected",i==j)});$("#sp").style.width=(i+1)*25+"%";$("#sdt").innerHTML="<b>"+ST[i][0]+"</b><span>"+ST[i][1]+"</span>"}
+$$(".st").forEach(function(b,i){b.onclick=function(){clearInterval(auto);step(i)}});step(0);auto=setInterval(function(){step((cur+1)%4)},3500);
+var M=[["Uso de memória",92,31,"%",100],["Tempo para ligar",140,18," s",150],["Erros no sistema",27,0,"",30]],P=50,raf,ba=$("#ba"),rg=$("#rg");
+function rows(k,t){return "<em>"+t+"</em>"+M.map(function(r){return "<div class='rw'><div><span>"+r[0]+"</span><b>"+r[k]+r[3]+"</b></div><div class='tk'><i style='width:"+Math.max(r[k]/r[4]*100,3)+"%'></i></div></div>"}).join("")}
+$(".l1").innerHTML=rows(1,"Antes: lento e com erros");$(".l2").innerHTML=rows(2,"Depois: desempenho normal");
+function setP(v){P=v;ba.style.setProperty("--p",v+"%");rg.value=v;$("#lv").innerHTML=M.map(function(r){return "<div>"+r[0]+"<b>"+Math.round(r[2]+(r[1]-r[2])*v/100)+r[3]+"</b></div>"}).join("")}
+function tw(to,ms,cb){cancelAnimationFrame(raf);var from=P,t0=null;if(matchMedia("(prefers-reduced-motion:reduce)").matches){setP(to);cb&&cb();return}(function f(t){t0=t0||t;var u=Math.min((t-t0)/ms,1),e=u<.5?4*u*u*u:1-Math.pow(-2*u+2,3)/2;setP(from+(to-from)*e);if(u<1)raf=requestAnimationFrame(f);else cb&&cb()})(0)}
+rg.oninput=function(){cancelAnimationFrame(raf);setP(+rg.value)};
+$("#bA").onclick=function(){tw(100,700)};$("#bD").onclick=function(){tw(0,700)};$("#bC").onclick=function(){tw(100,500,function(){tw(0,1800,function(){tw(50,600)})})};
+setP(50);var seen=new IntersectionObserver(function(e){if(e[0].isIntersecting){seen.disconnect();$("#bC").click()}},{threshold:.6});seen.observe(ba);
+$("#q").oninput=function(){var v=this.value.toLowerCase(),k=0;$$(".faq details").forEach(function(d){var m=d.textContent.toLowerCase().indexOf(v)>=0;d.hidden=!m;if(m)k++});$("#nf").hidden=k>0};
+function pv(){var s=$$("input[name=s]:checked").map(function(i){return i.value}).join(", ")||"Suporte técnico";$("#pv").textContent="Olá, sou "+($("#nome").value||"cliente do site")+". Preciso de: "+s+". "+$("#msg").value}
+$$("#f input,#f textarea").forEach(function(x){x.addEventListener("input",pv)});pv();
+
+var IC={monitor:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',heart:'<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>',chat:'<path d="M4 5h16v11H9l-5 4z"/>',search:'<circle cx="11" cy="11" r="6"/><path d="M16 16l4 4"/>',shield:'<path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z"/>',check:'<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',calendar:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',alert:'<path d="M12 3l10 18H2z"/><path d="M12 10v5M12 18h.01"/>',wifi:'<path d="M2 9a15 15 0 0 1 20 0M5 13a10 10 0 0 1 14 0M8.5 16.5a5 5 0 0 1 7 0M12 20h.01"/>',thermo:'<path d="M14 14.8V4a2 2 0 0 0-4 0v10.8a4 4 0 1 0 4 0z"/>',win:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/>',printer:'<path d="M7 9V3h10v6M7 17H4v-7h16v7h-3"/><rect x="7" y="14" width="10" height="7"/>',gauge:'<path d="M4 18a9 9 0 1 1 16 0"/><path d="M12 14l4-5"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 .9-1 1.7M12 17h.01"/>',phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/>',fb:'<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/>',ig:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>',x:'<path d="M4 4l16 16M20 4L4 20"/>'};
+function ic(n){return '<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">'+IC[n]+'</svg>'}
+function add(el,n,after){if(!el)return;var t=document.createElement("span");t.innerHTML=ic(n);var g=t.firstChild;if(after)el.insertBefore(g,after);else el.insertBefore(g,el.firstChild)}
+$$("[data-ic]").forEach(function(e){if(e.tagName=="SPAN"&&!e.textContent){e.outerHTML=ic(e.dataset.ic)}else add(e,e.dataset.ic)});
+$$(".facts div").forEach(function(d,i){add(d,["calendar","monitor","chat"][i])});
+var CI={"Computador lento":"gauge","Sem internet":"wifi","Impressora não imprime":"printer","Suspeita de vírus":"shield","Outro problema":"help"};
+$$("#chips .chip").forEach(function(c){add(c,CI[c.textContent])});
+$$("#ck label").forEach(function(l,i){add(l,["clock","win","alert","wifi","thermo"][i],l.firstChild.nextSibling)});
+$$(".st").forEach(function(b,i){add(b,["chat","search","shield","check"][i])});
+var SI=["chat","search","shield","check"],_s=step;step=function(i){_s(i);$("#sdt").insertAdjacentHTML("afterbegin",ic(SI[i]))};step(cur);
+add($(".tel"),"phone");add($(".soc a:nth-child(1)"),"fb");add($(".soc a:nth-child(2)"),"ig");add($(".soc a:nth-child(3)"),"x");add($(".fw"),"chat");
+</script>
+</body>
+</html>
