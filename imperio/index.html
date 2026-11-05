@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06152f">
+  <meta name="description" content="Império Caça Vazamento. Detecção e localização de vazamentos de água. Solicite um orçamento pelo WhatsApp.">
+  <title>Império Caça Vazamento | Detecção de Vazamentos</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    :root{--navy:#06152f;--navy2:#0a2850;--blue:#0789e8;--cyan:#19c8f5;--gold:#ffc928;--gold2:#e5a400;--text:#10213d;--muted:#5c6b80;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.55}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    header{background:var(--navy);color:#fff;border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:50}
+    .nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .identity{display:flex;align-items:center;gap:12px;min-width:245px}
+    .identity img{width:68px;height:68px;object-fit:contain;border-radius:50%;background:#fff}
+    .identity strong{font-size:20px;line-height:1.05;display:block;letter-spacing:.3px}
+    .identity span{display:block;color:var(--gold);font-weight:800;font-size:14px;letter-spacing:.8px;margin-top:4px}
+    nav{display:flex;gap:25px;font-size:14px;font-weight:700}
+    nav a:hover{color:var(--gold)}
+    .nav-contact{font-weight:800;color:var(--gold);white-space:nowrap}
+    .hero{color:#fff;background:radial-gradient(ellipse at 15% 100%,#07538a 0,transparent 38%),linear-gradient(115deg,#06142c,#09264c 70%,#06152f);overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;width:560px;height:560px;border:2px solid #ffc92855;border-radius:50%;right:-280px;top:-260px;box-shadow:0 0 0 30px #ffc92812,0 0 0 70px #ffc9280a}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(280px,390px) minmax(0,1fr);align-items:center;gap:64px;padding:62px 0 70px;max-width:1120px}
+    .hero-logo{display:flex;justify-content:center;align-items:center}
+    .hero-logo img{display:block;width:min(100%,360px);aspect-ratio:1/1;height:auto;object-fit:cover;border-radius:50%;background:#fff;border:5px solid #f6bd20;box-shadow:0 0 0 5px #087ee8,0 18px 42px #0008}
+    .eyebrow{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(34px,4vw,54px);line-height:1.08;letter-spacing:-1.5px;margin:13px 0 18px;max-width:680px}
+    h1 span{color:var(--gold)}
+    .hero-copy p{font-size:17px;line-height:1.7;color:#dce8f7;max-width:600px;margin:0}
+    .benefits{display:flex;flex-wrap:wrap;gap:10px 18px;margin:23px 0;color:#f1f6ff;font-size:12px;font-weight:700}
+    .benefits span:before{content:"✓";color:var(--gold);font-size:17px;font-weight:900;margin-right:7px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .button{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:40px;font-weight:800;font-size:14px;transition:.2s}
+    .button:hover{transform:translateY(-2px);filter:brightness(1.07)}
+    .button-primary{background:linear-gradient(110deg,#08b84f,#00d65b);color:#fff;box-shadow:0 8px 22px #00b94b40}
+    .button-secondary{border:2px solid var(--gold);color:#fff}
+    .section{padding:68px 0}
+    .section-title{text-align:center;margin:0 auto 35px;max-width:720px}
+    .section-title h2{font-size:clamp(28px,3.4vw,40px);line-height:1.15;margin:9px 0;color:var(--navy)}
+    .section-title p{margin:0;color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .service{padding:27px 20px;text-align:center;border-radius:15px;background:#f5f8fc;border:1px solid #e2eaf4;box-shadow:0 8px 18px #071d3b0b}
+    .service .icon{font-size:36px;margin-bottom:12px}
+    .service h3{font-size:18px;line-height:1.2;margin:0 0 10px;color:var(--navy)}
+    .service p{font-size:14px;color:var(--muted);margin:0}
+    .about{background:#f4f8fc}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about h2{font-size:clamp(28px,3.5vw,40px);line-height:1.12;color:var(--navy);margin:10px 0 15px}
+    .about p{color:var(--muted)}
+    .checklist{padding:0;list-style:none;margin:22px 0}
+    .checklist li{padding:8px 0;color:#344760}
+    .checklist li:before{content:"✓";font-weight:900;color:#0789e8;margin-right:10px}
+    .info-panel{padding:30px;border-radius:18px;background:linear-gradient(145deg,#071831,#0b3766);color:#fff;box-shadow:0 18px 35px #06152f20}
+    .info-panel h3{font-size:24px;margin:0 0 10px;color:var(--gold)}
+    .info-panel p{color:#d8e7f7;margin:0}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .step{border:1px solid #e3eaf3;border-radius:14px;padding:24px}
+    .step b{font-size:12px;color:#0789e8;letter-spacing:1px}
+    .step h3{margin:8px 0;color:var(--navy)}
+    .step p{margin:0;color:var(--muted);font-size:14px}
+    .contact{background:linear-gradient(115deg,#06152f,#0b3768);color:#fff;text-align:center}
+    .contact h2{font-size:clamp(28px,3.5vw,42px);margin:10px 0;color:#fff}
+    .contact p{color:#d9e6f5;max-width:650px;margin:0 auto 25px}
+    .faq{max-width:850px;margin:auto}
+    details{border-bottom:1px solid #e3eaf2;padding:18px 2px}
+    summary{font-weight:800;color:var(--navy);cursor:pointer}
+    details p{color:var(--muted);margin:10px 0 0}
+    footer{background:#030d1e;color:#d7e2ef;padding:34px 0 18px}
+    .footer-row{display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .footer-brand{display:flex;align-items:center;gap:13px}
+    .footer-brand img{width:68px;height:68px;object-fit:contain;border-radius:50%;background:#fff}
+    .footer-brand strong{color:#fff}
+    .copyright{border-top:1px solid #ffffff20;margin-top:25px;padding-top:15px;font-size:12px;color:#9aabc0}
+    .whatsapp-float{position:fixed;right:20px;bottom:20px;z-index:60;background:#08b957;color:#fff;padding:14px 19px;border-radius:50px;font-weight:900;box-shadow:0 8px 25px #0004}
+    @media(max-width:900px){nav{gap:13px}.nav-contact{display:none}.services{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:minmax(230px,310px) minmax(0,1fr);gap:30px}.hero-logo img{width:min(100%,300px)}h1{font-size:clamp(32px,4.2vw,44px)}}
+    @media(max-width:650px){.nav{min-height:75px}.identity{min-width:0}.identity img{width:54px;height:54px}.identity strong{font-size:16px}.identity span{font-size:11px}nav{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-grid{padding:38px 0 48px;gap:28px}.hero-logo{order:2}.hero-logo img{width:min(68vw,260px)}.hero-copy{text-align:center}.hero-copy p{font-size:16px;margin:auto}.hero-copy h1{font-size:clamp(34px,9vw,44px);margin-left:auto;margin-right:auto}.benefits{justify-content:center}.actions{justify-content:center}.services,.steps{grid-template-columns:1fr}.section{padding:52px 0}.footer-row{flex-direction:column;text-align:center}.whatsapp-float{right:12px;bottom:12px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="identity" href="#inicio" aria-label="Império Caça Vazamento - início">
+      <img src="logo.png" alt="Logotipo Império Caça Vazamento">
+      <div><strong>IMPÉRIO</strong><span>CAÇA VAZAMENTO</span></div>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#como-funciona">Como funciona</a><a href="#sobre">Sobre nós</a><a href="#contato">Contato</a>
+    </nav>
+    <a class="nav-contact" href="#contato">Fale conosco</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-logo"><img src="logo.png" alt="Logo oficial da Império Caça Vazamento"></div>
+      <div class="hero-copy">
+        <div class="eyebrow">Detecção e localização de vazamentos</div>
+        <h1>Localização de vazamentos com <span>precisão e cuidado.</span></h1>
+        <p>Identificação de possíveis vazamentos de água em residências, comércios e condomínios. Entre em contato e consulte as opções de atendimento.</p>
+        <div class="benefits"><span>Atendimento personalizado</span><span>Avaliação especializada</span><span>Orientação clara</span></div>
+        <div class="actions">
+          <a class="button button-primary whatsapp-link" href="#contato">Solicite um orçamento pelo WhatsApp</a>
+          <a class="button button-secondary" href="#servicos">Conheça os serviços</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="section-title"><div class="eyebrow">O que fazemos</div><h2>Nossos serviços</h2><p>Soluções para investigar sinais de vazamentos e problemas relacionados à rede hidráulica.</p></div>
+      <div class="services">
+        <article class="service"><div class="icon">🔎</div><h3>Caça-vazamento</h3><p>Investigação e localização de possíveis vazamentos de água.</p></article>
+        <article class="service"><div class="icon">💧</div><h3>Detecção de infiltrações</h3><p>Avaliação de sinais de umidade e infiltração em imóveis.</p></article>
+        <article class="service"><div class="icon">🛠️</div><h3>Inspeção hidráulica</h3><p>Verificação de indícios de problemas em instalações hidráulicas.</p></article>
+        <article class="service"><div class="icon">🏢</div><h3>Atendimento a imóveis</h3><p>Atendimento residencial, comercial e condominial, conforme disponibilidade.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about" id="sobre">
+    <div class="container about-grid">
+      <div><div class="eyebrow">Império Caça Vazamento</div><h2>Mais informação para encontrar a origem do problema</h2>
+        <p>Manchas de umidade, infiltrações e aumento inesperado na conta de água podem ser sinais de vazamento. Conte o que está acontecendo para receber orientação sobre o atendimento.</p>
+        <ul class="checklist"><li>Atendimento mediante consulta de região e disponibilidade</li><li>Orientação inicial sobre os sinais relatados</li><li>Informações claras sobre os próximos passos</li></ul>
+        <a class="button button-primary whatsapp-link" href="#contato">Fale com a nossa equipe</a>
+      </div>
+      <div class="info-panel"><h3>Suspeita de vazamento?</h3><p>Anote onde aparece a umidade, quando o problema começou e se houve aumento no consumo de água. Essas informações ajudam a entender melhor a situação no primeiro contato.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="como-funciona">
+    <div class="container">
+      <div class="section-title"><div class="eyebrow">Atendimento simples</div><h2>Como funciona</h2><p>Entre em contato e saiba como solicitar uma avaliação.</p></div>
+      <div class="steps">
+        <article class="step"><b>PASSO 01</b><h3>Conte o que aconteceu</h3><p>Descreva os sinais do vazamento e informe sua cidade ou bairro.</p></article>
+        <article class="step"><b>PASSO 02</b><h3>Consulte o atendimento</h3><p>Verifique a disponibilidade, a região atendida e as condições do serviço.</p></article>
+        <article class="step"><b>PASSO 03</b><h3>Solicite seu orçamento</h3><p>Combine os próximos passos diretamente com a equipe.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contato">
+    <div class="container"><div class="eyebrow">Fale conosco</div><h2>Precisa localizar um vazamento?</h2><p>Entre em contato com a Império Caça Vazamento para consultar atendimento e solicitar um orçamento.</p><a class="button button-primary whatsapp-link" href="#contato">Conversar pelo WhatsApp</a></div>
+  </section>
+
+  <section class="section" id="duvidas">
+    <div class="container"><div class="section-title"><div class="eyebrow">Perguntas frequentes</div><h2>Dúvidas comuns</h2></div>
+      <div class="faq">
+        <details><summary>Quais sinais podem indicar um vazamento?</summary><p>Manchas de umidade, infiltrações, queda de pressão e aumento inesperado no consumo de água podem indicar um vazamento. Uma avaliação ajuda a investigar a origem.</p></details>
+        <details><summary>É possível localizar vazamentos sem quebrar?</summary><p>Isso depende do tipo de instalação, do local e dos métodos e equipamentos disponíveis. Consulte a equipe para saber quais técnicas podem ser utilizadas no seu caso.</p></details>
+        <details><summary>Como faço para solicitar um orçamento?</summary><p>Entre em contato pelo WhatsApp, informe sua região e descreva o problema para consultar disponibilidade e valores.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="container">
+  <div class="footer-row"><div class="footer-brand"><img src="logo.png" alt="Logo Império Caça Vazamento"><div><strong>IMPÉRIO CAÇA VAZAMENTO</strong><br><span>Detecção e localização de vazamentos</span></div></div><a href="#inicio">Voltar ao topo ↑</a></div>
+  <div class="copyright">© 2026 Império Caça Vazamento. Todos os direitos reservados.</div>
+</div></footer>
+<a class="whatsapp-float whatsapp-link" href="#contato" aria-label="Contato pelo WhatsApp">WhatsApp</a>
+<script>
+  // IMPORTANTE: substitua pelo número oficial da empresa, com DDI e DDD, somente números.
+  // Exemplo de formato: 5513999999999
+  const WHATSAPP_NUMBER = "5513997000000";
+  const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para caça-vazamento.");
+  document.querySelectorAll(".whatsapp-link").forEach(link => {
+    link.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  });
+</script>
+</body>
+</html>
