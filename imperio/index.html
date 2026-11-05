@@ -80,12 +80,28 @@
 
     /* Animações leves para dar vida à marca sem prejudicar a leitura */
     @keyframes logoFloat {
-      0%,100% { transform: translateY(0) scale(1); }
-      50% { transform: translateY(-8px) scale(1.012); }
+      0%,100% { transform: translateY(0) scale(1) rotate(-1deg); }
+      25% { transform: translateY(-10px) scale(1.025) rotate(1deg); }
+      50% { transform: translateY(-4px) scale(1.045) rotate(0deg); }
+      75% { transform: translateY(-12px) scale(1.02) rotate(-.7deg); }
     }
     @keyframes logoGlow {
-      0%,100% { box-shadow: 0 0 0 5px #087ee8, 0 18px 42px #0008, 0 0 18px #ffc92855; }
-      50% { box-shadow: 0 0 0 5px #087ee8, 0 22px 48px #0009, 0 0 34px #ffc928aa; }
+      0%,100% { box-shadow: 0 0 0 5px #087ee8, 0 18px 42px #0008, 0 0 18px #ffc92855; filter:brightness(1); }
+      50% { box-shadow: 0 0 0 7px #12bdf5, 0 24px 55px #0009, 0 0 42px #ffc928dd; filter:brightness(1.09) saturate(1.12); }
+    }
+    @keyframes haloPulse {
+      0%,100% { transform:translate(-50%,-50%) scale(.92); opacity:.35; }
+      50% { transform:translate(-50%,-50%) scale(1.12); opacity:.9; }
+    }
+    @keyframes haloRotate {
+      from { transform:translate(-50%,-50%) rotate(0deg); }
+      to { transform:translate(-50%,-50%) rotate(360deg); }
+    }
+    @keyframes logoSweep {
+      0% { transform:translateX(-180%) rotate(25deg); opacity:0; }
+      20% { opacity:.65; }
+      55% { opacity:.35; }
+      100% { transform:translateX(180%) rotate(25deg); opacity:0; }
     }
     @keyframes waterShimmer {
       0% { background-position: 0% 50%; }
@@ -99,9 +115,24 @@
       0%,100% { box-shadow: 0 8px 22px #00b94b40; }
       50% { box-shadow: 0 10px 30px #00d65b75; }
     }
+    .hero-logo { position:relative; isolation:isolate; }
+    .hero-logo::before {
+      content:""; position:absolute; left:50%; top:50%;
+      width:112%; aspect-ratio:1; border-radius:50%;
+      border:2px solid #ffc928aa;
+      box-shadow:0 0 22px #ffc92866, inset 0 0 22px #0789e855;
+      z-index:-1; animation:haloPulse 3.8s ease-in-out infinite;
+    }
+    .hero-logo::after {
+      content:""; position:absolute; left:50%; top:50%;
+      width:122%; aspect-ratio:1; border-radius:50%;
+      border:1px dashed #20c8f4aa; z-index:-2;
+      animation:haloRotate 22s linear infinite;
+    }
     .hero-logo img {
-      animation: logoFloat 5s ease-in-out infinite, logoGlow 5s ease-in-out infinite;
-      will-change: transform, box-shadow;
+      position:relative; overflow:hidden;
+      animation: logoFloat 6s ease-in-out infinite, logoGlow 4.2s ease-in-out infinite;
+      will-change: transform, box-shadow, filter;
     }
     .hero-copy .eyebrow,
     .hero-copy h1,
@@ -124,7 +155,7 @@
     }
 
     @media(max-width:900px){nav{gap:13px}.nav-contact{display:none}.services{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:minmax(230px,310px) minmax(0,1fr);gap:30px}.hero-logo img{width:min(100%,300px)}h1{font-size:clamp(32px,4.2vw,44px)}}
-    @media(max-width:650px){.nav{min-height:75px}.identity{min-width:0}.identity img{width:54px;height:54px}.identity strong{font-size:16px}.identity span{font-size:11px}nav{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-grid{padding:38px 0 48px;gap:28px}.hero-logo{order:2}.hero-logo img{width:min(68vw,260px)}.hero-copy{text-align:center}.hero-copy p{font-size:16px;margin:auto}.hero-copy h1{font-size:clamp(34px,9vw,44px);margin-left:auto;margin-right:auto}.benefits{justify-content:center}.actions{justify-content:center}.services,.steps{grid-template-columns:1fr}.section{padding:52px 0}.footer-row{flex-direction:column;text-align:center}.whatsapp-float{right:12px;bottom:12px}}
+    @media(max-width:650px){.nav{min-height:75px}.identity{min-width:0}.identity img{width:54px;height:54px}.identity strong{font-size:16px}.identity span{font-size:11px}nav{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-grid{padding:38px 0 48px;gap:28px}.hero-logo{order:2}.hero-logo img{width:min(64vw,250px)}.hero-logo::before{width:112%}.hero-logo::after{width:124%}.hero-copy{text-align:center}.hero-copy p{font-size:16px;margin:auto}.hero-copy h1{font-size:clamp(34px,9vw,44px);margin-left:auto;margin-right:auto}.benefits{justify-content:center}.actions{justify-content:center}.services,.steps{grid-template-columns:1fr}.section{padding:52px 0}.footer-row{flex-direction:column;text-align:center}.whatsapp-float{right:12px;bottom:12px}}
   </style>
 </head>
 <body>
