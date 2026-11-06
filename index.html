@@ -242,9 +242,9 @@ header.open .mb i:nth-child(1){top:20.5px;transform:rotate(45deg)}header.open .m
 #mm .w{display:grid;gap:2px;padding-top:10px;padding-bottom:18px}
 #mm a{text-decoration:none;font:700 19px "Bricolage Grotesque",sans-serif;padding:14px 4px;border-bottom:1px solid var(--line);color:var(--ink)}
 #mm a.btn{margin-top:14px;text-align:center;border:0;color:var(--accink)}
-@media(max-width:760px){.mb{display:block}header.open #mm{display:block}.nav>nav{gap:10px}}
+@media (max-width:900px),(hover:none) and (pointer:coarse){.mb{display:flex!important;align-items:center;justify-content:center;background:var(--acc);border-color:var(--acc)}.mb i{background:var(--accink)}header.open #mm{display:block}.nav>nav{gap:10px}nav a:not(.btn){display:none}}
 @media(max-width:520px){.nav>nav .btn{display:none}}
-@media(min-width:761px){#mm{display:none!important}}
+@media (min-width:901px) and (hover:hover){#mm{display:none!important}}
 </style>
 </head>
 <body>
@@ -467,7 +467,7 @@ b.onclick=function(){set(!h.classList.contains("open"))};
 document.getElementById("mm").addEventListener("click",function(e){if(e.target.closest("a"))set(false)});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
 document.addEventListener("click",function(e){if(!h.contains(e.target))set(false)});
-matchMedia("(min-width:761px)").addEventListener("change",function(){set(false)})})();
+matchMedia("(min-width:901px)").addEventListener("change",function(){set(false)})})();
 </script>
 </body>
 </html>
